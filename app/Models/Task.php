@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class
 Task extends Model
 {
-    protected $fillable = ['description'];
+    protected $fillable = ['description','task_group_id'];
 
     public function group() : BelongsTo
     {

@@ -7,7 +7,7 @@ class TaskGroupRepository
 {
   public function getAll() : Collection
     {
-        return Task::all();
+        return TaskGroup::all();
     }
     public function store(Request $request) : TaskGroup
     {

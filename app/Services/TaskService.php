@@ -10,11 +10,10 @@ class TaskService
     {
     }
     public function getAllTasks(){
-
         return $this->repo->getAll();
     }
-    public function storeTask(Request $request){
-        return $this->repo->store($request);
+    public function storeTask($data){
+        return $this->repo->store($data);
     }
 
 }

@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Task;
 use Illuminate\Http\Request;
-use App\Repositories\TaskRepository;
+use App\Services\TaskService;
+//use App\Repositories\TaskRepository;
 
 
 class TaskController extends Controller
@@ -12,12 +12,10 @@ class TaskController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function __construct(protected TaskRepository $taskRepository){
-        $this->tasks = $taskRepository;
-    }
+    public function __construct(protected TaskService $taskService){}
     public function index()
     {
-        return view('tasks', ['tasks' => $this->tasks->getAll()]);
+        return view('tasks', ['taskGroups' => $this->taskService->getAllTasks()]);
     }
 
     /**
@@ -25,31 +23,11 @@ class TaskController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        dd($request);
+
+        $this->taskService->storeTask($request);
+
+        return redirect('/');
+
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Task $task)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Task $task)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Task $task)
-    {
-        //
-    }
 }

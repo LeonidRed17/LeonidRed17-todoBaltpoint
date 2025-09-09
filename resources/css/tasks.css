@@ -1,0 +1,28 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.group_content, .tasks_list_block{
+    background:#f9f9f9;
+    width:500px;
+    padding:8px;
+}
+.center{
+    display:flex;
+    justify-content: flex-start;
+    flex-direction:column;
+}
+.groups_names_select, .group_name_block, .group_description_block, .task_name_block, .buttons_block{
+    margin-top:8px;
+}
+.buttons_block{
+    margin-bottom:10px;
+}
+
+.submit_button{
+    
+    color:green;
+}
+.reset_button{
+    
+    color:red;
+}
