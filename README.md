@@ -4,8 +4,8 @@
 
 ## Установка и запуск
 
-#git clone https://github.com/LeonidRed17/todoBaltpoint.git
-#cd todoBaltpoint
-#composer install
-#php artisan migrate:fresh --seed
-#composer dev
+# git clone https://github.com/LeonidRed17/todoBaltpoint.git
+# cd todoBaltpoint
+# composer install
+# php artisan migrate:fresh --seed
+# composer dev
